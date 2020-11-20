@@ -1,0 +1,58 @@
+* {
+    background-color:black;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: cornsilk;
+    margin: 10px;
+}
+
+button {
+    display: block;
+    margin: auto;
+    color: cornsilk;
+}
+
+.container {
+    width: 800px;
+    margin: auto;
+    cursor: url(../img/panci3.png), auto;
+}
+
+.container:active {
+    cursor: url(../img/panci4.png), auto;
+}
+.poon {
+    width: 175px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    bottom: -5px;
+    float: left;
+    padding-right: 65px;
+}
+
+.poon::after {
+    content: '';
+    display: block;
+    width: 175px;
+    height: 200px;
+    background: url(../img/poon.png) bottom center no-repeat;
+    background-size: 90%;
+    position: absolute;
+    bottom: 0;
+}
+
+.kunti {
+    width: 55%;
+    height: 100%;
+    background: url(../img/kunti.png) bottom center no-repeat;
+    background-size: 80%;
+    position: absolute;
+    right: 90px;
+    bottom: 5px;
+    transition: right 0.3s;
+}
+
+.poon.muncul .kunti {
+    right: -45px;
+}
